@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src"
+    //https://velog.io/@longroadhome/%EC%98%A4%EB%8A%98%EC%9D%98%EC%82%BD%EC%A7%882-CRA-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-tsconfig-%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95
+    // paths 설정이 안되는 이유, 방법까지
+    // "paths": {
+    //   "test/*": ["./components/*"]
+    // }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
