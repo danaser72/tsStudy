@@ -1,2 +1,3 @@
 # tsStudy
-Learn Typescript by 'https://www.typescriptlang.org/ko/docs/'
+
+`Learn Typescript by 'https://www.typescriptlang.org/ko/docs/'`
