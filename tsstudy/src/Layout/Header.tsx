@@ -1,11 +1,19 @@
-import { Fragment } from "react";
-import 
+import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
+import { Menu } from "@mui/icons-material";
 
-const Header = () => {
+const Header = (prop: { fnOpen: () => void }) => {
+  const { fnOpen } = prop;
   return (
-    <Fragment>
-      <div className="text-3xl font-bold underline">Header</div>
-    </Fragment>
+    <AppBar enableColorOnDark={true} position="fixed">
+      <Toolbar>
+        <IconButton color="inherit" onClick={fnOpen} edge="start">
+          <Menu />
+        </IconButton>
+        <Typography variant="h6" noWrap={true}>
+          Header
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 
