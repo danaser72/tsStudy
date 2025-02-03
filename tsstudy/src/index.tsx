@@ -5,8 +5,10 @@ import "./index.css";
 import App from "component/App";
 import NotFound from "NotFound";
 import reportWebVitals from "reportWebVitals";
+import Todo from "component/Todo";
 import TicTakToe from "component/TicTakToe";
 import Layout from "Layout";
+import Calendar from "component/Calendar";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,8 +20,10 @@ root.render(
         {/* 모든 경로에 렌더링 */}
         <Route path="/" element={<Layout />}>
           {/* index : 기본 자식 라우트를 지정 */}
-          <Route index element={<App />} />
+          <Route index path={"/App"} element={<App />} />
+          <Route path={"/Todo"} element={<Todo />} />
           <Route path="/TicTakToe" element={<TicTakToe />} />
+          <Route path="/Calendar" element={<Calendar />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

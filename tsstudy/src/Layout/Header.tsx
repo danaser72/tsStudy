@@ -1,7 +1,12 @@
 import { Fragment } from "react";
+import 
 
 const Header = () => {
-  return <Fragment>Header</Fragment>;
+  return (
+    <Fragment>
+      <div className="text-3xl font-bold underline">Header</div>
+    </Fragment>
+  );
 };
 
 export default Header;

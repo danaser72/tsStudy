@@ -8,7 +8,15 @@ const Sidebar = () => {
         <Link to="/">Home</Link>
       </p>
       <p>
-        <Link to="/TicTakToe">TicTakToe</Link>
+        <div>
+          <Link to="/App">App</Link>
+        </div>
+        <div>
+          <Link to="/TicTakToe">TicTakToe</Link>
+        </div>
+        <div>
+          <Link to="/Calendar">Calendar</Link>
+        </div>
       </p>
     </Fragment>
   );

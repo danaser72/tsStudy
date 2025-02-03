@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
-import "styles/components/TicTakToe/TicTakToe.scss";
+//import "styles/components/TicTakToe/TicTakToe.css";
+import "styles/components/TicTakToe/TicTakToe.css";
 
 const TicTakToe = () => {
   /** 턴 */
@@ -107,7 +108,9 @@ const TicTakToe = () => {
 
   return (
     <Fragment>
-      <button onClick={createBoard}>초기화</button>
+      <button className={`py-2 font-semibold rounded-lg`} onClick={createBoard}>
+        초기화
+      </button>
       <table id="board">
         <tbody>
           {board.map((v, i) => {
