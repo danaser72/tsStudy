@@ -9,8 +9,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import { Container, Box, styled } from "@mui/material";
-//import { styled } from "@mui/material/styles";
+import { Container, Box, styled, useTheme } from "@mui/material";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -29,15 +28,26 @@ const Layout = () => {
     setOpen(!open);
   };
 
+  const theme = useTheme();
+
+  console.log(theme);
+
   return (
     <Fragment>
       <Header fnOpen={openSidebar} />
       <Sidebar open={open} fnOpen={openSidebar} />
-      <Container component={"main"} sx={{ flexGrow: 1, p: 3 }}>
+      <Box>
         <DrawerHeader />
-        <Outlet />
-      </Container>
-      <Footer />
+        <Container
+          component={"main"}
+          sx={{
+            p: 3,
+            minHeight: `calc(100vh - ${theme.mixins.toolbar.minHeight}px * 2)`,
+          }}>
+          <Outlet />
+        </Container>
+        <Footer />
+      </Box>
     </Fragment>
   );
 };

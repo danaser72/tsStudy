@@ -3,7 +3,6 @@ import {
   Box,
   List,
   ListItemButton,
-  ListItemIcon,
   ListItemText,
   Divider,
   ListItem,

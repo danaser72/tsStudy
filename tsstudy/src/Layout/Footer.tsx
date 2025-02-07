@@ -1,11 +1,15 @@
-import { Box, Container, Toolbar, Typography } from "@mui/material";
+import { Box, Container, Toolbar, Typography, useTheme } from "@mui/material";
 
 const Footer = () => {
+  const defaultTheme = useTheme();
   return (
     <Container
       component={"footer"}
       maxWidth={false}
-      sx={{ position: "fixed", bottom: 0 }}
+      sx={{
+        backgroundColor: defaultTheme.palette.primary.main,
+        color: defaultTheme.palette.primary.contrastText,
+      }}
       disableGutters>
       <Toolbar>
         <Typography variant="h6" noWrap={true}>

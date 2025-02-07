@@ -44,3 +44,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+<br><br>
+
+---
+
+## Study React + TypeScript + CRA + Material UI
+
+- ### CRA vs Next.js
+
+  - CRA : CSR 기반 FE 프로젝트, Backend가 따로 존재
+  - Next.js : SSR 기반 FE 프로젝틎, SEO(Search Engine Optimization), API 핸들링이 필요할 경우 사용
+    - SEO는 SSR이 유리!
+
+- ### React-Router-Dom [Outlet]
+
+  - react-router-dom에서, 중첩 라우팅을 할 수 있도록 해주는 컴포넌트
+  - 부모 경로와 일치하는 자식 경로를 렌더링하거나, 없
+  - Outlet : react-router-dom에서, 중첩 라우팅을 할 수 있도록 해주는 컴포넌트
+
+- ### createTheme vs useTheme
+  - createTheme은 테마 생성 함수
+  - ThemeProvider 컴포넌트로 children을 감쌀 경우, 해당 테마 적용
+  - useTheme은 상위의 ThemeProvider를 상속
+  - 참고 : https://velog.io/@soongle/mui-Theming-with-createTheme-ThemeProvider-useTheme
